@@ -1,0 +1,18 @@
+@startuml
+
+Title Conception 
+
+class Salarie {
++String nomSalarie
+~String serviceSalarie
+#Date dateEmbauche
+-double salaire
+-{static} String entreprise
++travaille(int): void
++{static} seReunir(): String
+}
+
+
+
+  
+@enduml

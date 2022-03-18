@@ -1,0 +1,77 @@
+@startuml
+
+Title Contrat de location 
+
+Class Client {
+    - nom du client 
+    - adresse client 
+    - téléphone client 
+    }
+    
+Class Contrat { 
+    - date Contrat
+    - date remise
+    - lieu remise
+    - heure remise
+    - code de rabais appliqué
+    - kilométrage inclus 
+    - assurance collision? 
+    - suppression franchise? 
+    - nombre de jours location 
+    - heures en sus 
+    - kilomètres parcourus 
+    - montant facturé
+    }
+
+Class Véhicule {
+    - no immatriculation
+    - automatique
+    - no série
+    
+    - année 
+    - climatisation 
+    - nombre portes 
+    - kilométrage actuel 
+    }
+    
+    class Marque{
+    marque
+    }
+    
+    class Categorie{
+    libelle catégorie
+    }
+    
+    class Modèle{
+    modèle véhicule
+    }
+ 
+    
+Class Tarification {
+    - tarif Horaire 
+    - tarif quotidien
+    - tarif hebdomadaire 
+    - tarif kilométrage
+    - tarif assurance collision quotidien 
+    - montant franchise collision 
+    - tarif suppression de franchise quotidien 
+}
+
+Class Permis {
+    - no permis de conduire 
+    - province permis
+}
+
+
+Client "1" - "1" Permis
+
+Client "1..1" -- "0..*" Contrat
+
+Véhicule "1..*" -- "1" Marque
+Véhicule "1..*" -- "1" Tarification
+
+Marque "1" -- "1..*" Modèle 
+Contrat "0..*" -- "1" Véhicule
+Modèle "1..*" -- "1" Catégorie
+
+@enduml

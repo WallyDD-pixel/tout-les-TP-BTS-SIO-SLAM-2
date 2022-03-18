@@ -1,0 +1,67 @@
+@startuml
+ class client{
+ -nom
+ -adresse
+ -no permis de conduire
+ -pays de permis
+ - Province permis
+
+}
+client ..> contrat
+class contrat{
+    - no contrat de location
+    - categorie 
+    -date contrat
+    -lieu prise possesion
+    -heure prise possesion
+    - Date remise 
+    - Lieu remise 
+    - Heure remise
+    -Tarif kilométrage
+    -Tarif assurance collision quotidien 
+    -Montant franchise collision 
+    -Tarif suppression de franchise quotidien 
+    -Code de rabais appliqué 
+    -Assurance collision? 
+    -Suppression franchise? 
+    -Nombre de jours location 
+    -Montant facturé
+
+    
+}
+contrat ..> prix
+class prix{
+    - Tarif Horaire 
+- Tarif quotidien
+ - Tarif hebdomadaire 
+- Tarif kilométrage
+ -Tarif assurance collision quotidien 
+- Montant franchise collision 
+- Tarif suppression de franchise quotidien 
+- Assurance collision? 
+- Suppression franchise? 
+- Nombre de jours location 
+- Heures en sus 
+- Montant facturé
+- Automatique? 
+- Nombre portes 
+- Kilométrage actuel 
+
+
+}
+prix ..> voiture
+prix <|-- client
+
+class voiture{
+   
+- Année - Climatisation? 
+- Automatique? 
+- Nombre portes 
+- Kilométrage actuel 
+
+- Montant franchise collision 
+- Kilométrage inclus 
+
+}
+
+@enduml

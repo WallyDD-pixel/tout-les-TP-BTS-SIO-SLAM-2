@@ -1,0 +1,77 @@
+@startuml
+
+Title Societe de location 
+
+Class Magasin {
+-numéro agence
+-numéro de téléphone
+    }
+    
+Class Personnel {
+- identifiant
+- nom
+- prénom
+- salaire
+- estGerant
+    }
+    
+    class Poste {
+    - identifiant
+    -intitule
+    }
+    
+Class Adresse {
+- identifiant 
+- numéro rue
+- nom rue 
+- ville
+- code postal
+ 
+ }
+
+Class Membre {
+- numéro de membre
+ - nom 
+ - prénom
+ - date d’inscription 
+    }
+    
+class Location {
+ - numéro de location
+ - date de location 
+ - date de restitution
+}
+    
+Class Film {
+- le numéro de catalogue du film
+- titre du film
+    }
+    
+Class Cassette {
+ -numéro de la cassette
+ - montant de location quotidien
+ - prix d’achat de la cassette
+ - état: loué ou non
+    }
+
+class Categorie {
+-identifiant
+-libellé: : action, famille, drame, comédie, horreur, fantastique, science-fiction ou adulte
+}
+
+class Acteur {
+- identifiant
+- nom acteur
+- prenom acteur
+}
+
+class Realisateur {
+- identifiant
+- nom réalisateur
+- prenom réalisateur
+}
+
+    
+
+  
+@enduml

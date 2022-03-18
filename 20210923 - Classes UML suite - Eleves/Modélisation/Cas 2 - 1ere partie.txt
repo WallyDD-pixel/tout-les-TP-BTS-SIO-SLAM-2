@@ -1,0 +1,72 @@
+@startuml
+
+Title Entretien 
+
+Class Candidat {
+- No du candidat
+- Nom candidat
+- Prénom candidat
+- No téléphone
+- Date de naissance
+
+}
+
+Class Poste {
+- No affichage du poste
+- Nom du poste
+}
+
+Class Langue {
+- identifiant
+- libellé langue
+}
+
+Class NiveauLangue {
+- Niveau
+}
+
+Class Diplome {
+- identifiant
+- désignation
+
+}
+
+
+Class EstDiplome{
+- dateDiplome
+}
+
+Class Institution {
+- identifiant
+- nom
+}
+
+Class Employeur {
+- Raison sociale entreprise
+
+}
+
+Class CentreInteret {
+- identifiant
+- désignation
+}
+
+class PeriodeEmploi {
+- identifiant
+- Date d’embauche entreprise
+- Date de départ de l’entreprise
+}
+
+Class FonctionExercée {
+- Date d’entrée en fonction
+- Date de départ de la fonction
+- Salaire à la fin
+}
+
+Class Fonction {
+- Désignation fonction
+}
+
+
+  
+@enduml
